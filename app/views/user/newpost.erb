@@ -1,0 +1,33 @@
+ <a href="/"> home</a>
+  <li>User <%= @user.username %></li>
+
+  <form action="/posted" method="post">
+  <h2>Create post</h2>
+  <br>
+     <div>
+     <label for="make">Make:</label>
+     <input type="text" name="make"  id="make">
+     </div>
+     <br>
+        <div>
+        <label for="model">Model:</label>
+        <input type="text" name="model" id="model">
+        </div>    
+     <br>
+         <div>
+        <label for="miles">Miles:</label>
+        <input type="text" name="miles" id="miles">
+        </div>
+        <br>
+      <div>
+      <label for="year">Year:</label>
+     <input type="text" name="year"  id="year">
+     </div>
+     <br>
+        <div>
+        <label for="price">Price:</label>
+        <input type="text" name="price" id="price">
+        </div>
+        <br>
+        <input type="submit" value="Submit Post">
+        </form>

@@ -1,0 +1,28 @@
+<h1>Hello user</h1>
+
+<h1>Edit</h1>
+
+<form action="/user/edit" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <br>
+  <div>
+    <label for="firstname">First Name:</label>
+    <input type="text" name="user[firstname]" id="make" value="<%= @user.firstname%>">
+  </div>
+  <br>
+  <br>
+  <div>
+    <label for="lastname">Last Name:</label>
+    <input type="text" name="user[lastname]" id="make" value="<%= @user.lastname%>">
+  </div>
+  <br>
+  <br>
+  <div>
+    <label for="contact">contact:</label>
+    <input type="text" name="user[contact]" id="make" value="<%= @user.contact%>">
+  </div>
+  <br>
+
+  <input type="submit" value="Update">
+</form>

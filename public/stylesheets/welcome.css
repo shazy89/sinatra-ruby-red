@@ -1,0 +1,17 @@
+.body {
+    text-align: center;
+}
+
+.parking_lot {
+    margin-top: 10px;
+    margin-left: 10px;
+    overflow: scroll;
+    padding: 20px;
+    height: 400px;
+    width: 700px;
+    align-items: center;
+}
+.log_in, .sign_in {
+   padding: 40px;
+   
+}

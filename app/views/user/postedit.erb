@@ -1,0 +1,39 @@
+<a href="/"> home</a>
+<h1>Edit</h1>
+
+<form action="/posts/<%= @findpost.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <br>
+  <div>
+    <label for="make">Make:</label>
+    <input type="text" name="car[make]" id="make" value="<%= @findpost.make %>">
+  </div>
+  <br>
+   <br>
+  <div>
+    <label for="model">Model:</label>
+    <input type="text" name="car[model]" id="model" value="<%= @findpost.model %>">
+  </div>
+  <br>
+   <br>
+  <div>
+    <label for="miles">Miles:</label>
+    <input type="text" name="car[miles]" id="miles" value="<%= @findpost.miles %>">
+  </div>
+  <br>
+   <br>
+  <div>
+    <label for="year">Year:</label>
+    <input type="text" name="car[year]" id="year" value="<%= @findpost.year %>">
+  </div>
+  <br>
+   <br>
+  <div>
+    <label for="price">Price:</label>
+    <input type="text" name="car[price]" id="price" value="<%= @findpost.price %>">
+  </div>
+  <br>
+  <input type="submit" value="Update">
+</form>
+
