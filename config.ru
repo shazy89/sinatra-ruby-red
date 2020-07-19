@@ -6,6 +6,7 @@ end
 
 use Rack::MethodOverride
 
+use HousepostsController
 use PostsController
 use SessionsController
 use UserController

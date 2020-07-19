@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Compiled and minified JavaScript -->
     
@@ -20,13 +21,14 @@
     
   </head>
   <body class="#e8eaf6 indigo lighten-5">
-    <div class="container">
-      <nav>
+    <div >
+    
+      <nav class="red">
         <ul>
             <% if logged_in? %>
-            <li class="right"><a class="waves-effect waves-light btn-small" href="/logout" >Logout</a></li>
-            <li class="left"><a class="waves-effect waves-light btn-small" href="/user/create">create posts</a></li>
-             <li class="left" ><a class="waves-effect waves-light btn-small" href="/userpage">User's page</a></li>
+            <li class="right"><a  href="/logout" >Logout</a></li>
+            <li class="left"><a  href="/user/create">create posts</a></li>
+             <li class="left" ><a  href="/userpage">User page</a></li>
        
             <%else %>
             <li class="right"><a href="/signup">Create Account</a></li>
@@ -34,21 +36,34 @@
             <%end%>
            </ul>
       </nav>   
- 
+         <!-- Dropdown Trigger -->
+  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Options</a>
+
+  <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="/cars">Auto</a></li>
+      <li><a href="/houses">Real Estate</a></li>
+      <li class="divider" tabindex="-1"></li>
+      
+      </ul> 
+     
+      
+   
        <% if flash[:error] %> 
        <% flash[:error].each do |error| %>
-           <div>
-              <%= error %>
+           <div  class="#ef5350 red lighten-1 center">
+           <span class="black-text text-darken-4">  <%= error %> </span>
           </div>
              <% end %>
         <% end %>
          <% if flash[:notice] %>
-          <div>
-            <%= flash[:notice] %>
+          <div class="#ef5350 red lighten-1 center">
+          <span class="black-text text-darken-4">  <%= flash[:notice] %></span>
           </div>
         <% end %>
 
-<div class="container grey lighten-4 z-depth-5" style="margin-top: 25px; margin-bottom: 25px; padding: 25px;">
+
+ <div class="container grey lighten-4 z-depth-5" style="margin-top: 25px; margin-bottom: 25px; padding: 25px;">
         <%= yield %>
 
      
@@ -57,8 +72,32 @@
    
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-     
-
+   
+   <script>
+      $(document).ready(function() {
+        $('.dropdown-trigger').dropdown();
+      })
+    </script>
+    <script>
+     $(document).ready(function(){
+    $('select').formSelect();
+  });
+    </script>
+    <script>
+      $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+    </script>
+    <script>
+      $(document).ready(function() {
+    $('input#input_text, textarea#textarea2').characterCounter();
+  });
+    </script>
+    <script>
+      $(document).ready(function(){
+    $('.modal').modal();
+  });
+    </script>
     <!--[if lt IE 7]>
       <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
       <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>

@@ -2,19 +2,19 @@
 <h1>Manage Post</h1>
 
 <h2>Make: <%=@findpost.make%> </h2>
-<p>Model: <%=@findpost.model%></p>
-<p>Miles: <%=@findpost.miles%></p>
-<p>Year: <%=@findpost.year%></p>
-<p>Price: $<%=@findpost.price%></p>
+   <p>Model: <%=@findpost.model%></p>
+   <p>Miles: <%=@findpost.miles%></p>
+   <p>Year: <%=@findpost.year%></p>
+   <p>Price: $<%=@findpost.price%></p>
 <div>
-<form action="/posts/<%= @findpost.id %>/edit" method="get">
-<button>Edit</button>
+  <form action="/posts/<%= @findpost.id %>/edit" method="get">
+  <button>Edit</button>
 </form>
 </div>
 
 <div>
-<form action="/posts/<%= @findpost.id %>" method="post">
-<%=@flash.message%>
+   <form action="/posts/<%= @findpost.id %>" method="post">
+   <%=@flash.message%>
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete">
 </form>

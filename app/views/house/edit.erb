@@ -1,0 +1,66 @@
+
+
+<a href="/"> home</a>
+<h1>Edit</h1>
+
+<form action="/house/<%= @findhouse.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <br>
+  <div>
+    <label for="badroom">Bd:</label>
+    <input type="text" name="house[badroom]" id="badroom" value="<%= @findhouse.badroom %>">
+  </div>
+  
+   <br>
+  <div>
+    <label for="bathroom">ba:</label>
+    <input type="text" name="house[bathroom]" id="bathroom" value="<%= @findhouse.bathroom %>">
+  </div>
+  <br>
+   <br>
+  <div>
+    <label for="sqf">sqf:</label>
+    <input type="text" name="house[sqf]" id="sqf" value="<%= @findhouse.sqf %>">
+  </div>
+  <br>
+   <br>
+  <div>
+    <label for="zip_code">zip code:</label>
+    <input type="text" name="house[zip_code]" id="zip_code" value="<%= @findhouse.zip_code %>">
+  </div>
+  <br>
+   <br>
+  <div>
+    <label for="price">Price:</label>
+    <input type="text" name="house[price]" id="price" value="<%= @findhouse.price %>">
+  </div>
+  <br>
+  <div>
+    <label for="comment">comment:</label>
+    <input type="text" name="house[comment]" id="comment" value="<%= @findhouse.comment %>">
+  </div>
+  <br>
+  <div>
+    <label for="address">address:</label>
+    <input type="text" name="house[address]" id="address" value="<%= @findhouse.address %>">
+  </div>
+  <br>
+  <div>
+    <label for="city">city:</label>
+    <input type="text" name="house[city]" id="city" value="<%= @findhouse.city %>">
+  </div>
+  <br>
+  <div>
+    <label for="state">state:</label>
+    <input type="text" name="house[state]" id="state" value="<%= @findhouse.state %>">
+  </div>
+  <br>
+   <div>
+    <label for="country">state:</label>
+    <input type="text" name="house[country]" id="country" value="<%= @findhouse.country %>">
+  </div>
+  <br>
+  <input type="submit" value="Update">
+</form>
+
