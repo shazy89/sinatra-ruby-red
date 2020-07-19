@@ -23,32 +23,22 @@
   <body class="#e8eaf6 indigo lighten-5">
     <div >
     
-      <nav class="red">
+      <nav class="nav-wrapper red">
         <ul>
             <% if logged_in? %>
-            <li class="right"><a  href="/logout" >Logout</a></li>
-            <li class="left"><a  href="/user/create">create posts</a></li>
-             <li class="left" ><a  href="/userpage">User page</a></li>
+              <li class="right"><a  href="/logout" >Logout</a></li>
+              <li class="left"><a  href="/user/create">create posts</a></li>
+              <li class="left" ><a  href="/userpage">User page</a></li>
        
             <%else %>
-            <li class="right"><a href="/signup">Create Account</a></li>
-            <li class="right"><a href="/login">Login</a></li>
+              <li class="right"><a href="/signup">Create Account</a></li>
+              <li class="right"><a href="/login">Login</a></li>
             <%end%>
+              <li class="tab"><a href="/cars">Auto</a></li>
+              <li class="tab"><a class="active" href="/houses">Real Estate</a></li>          
            </ul>
-      </nav>   
-         <!-- Dropdown Trigger -->
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Options</a>
+       </nav>   
 
-  <!-- Dropdown Structure -->
-    <ul id='dropdown1' class='dropdown-content'>
-      <li><a href="/cars">Auto</a></li>
-      <li><a href="/houses">Real Estate</a></li>
-      <li class="divider" tabindex="-1"></li>
-      
-      </ul> 
-     
-      
-   
        <% if flash[:error] %> 
        <% flash[:error].each do |error| %>
            <div  class="#ef5350 red lighten-1 center">
@@ -61,7 +51,6 @@
           <span class="black-text text-darken-4">  <%= flash[:notice] %></span>
           </div>
         <% end %>
-
 
  <div class="container grey lighten-4 z-depth-5" style="margin-top: 25px; margin-bottom: 25px; padding: 25px;">
         <%= yield %>
@@ -105,5 +94,16 @@
   </body>
 </html>
 
+     
+
+       
+      
+        
+    
 
 
+      
+
+
+
+   
