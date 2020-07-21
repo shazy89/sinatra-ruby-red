@@ -7,13 +7,19 @@
         <form action="/posted" method="post">
   
    <br>
-     <div>
-      <label for="make">Make:</label>
-      <input type="text" name="make"  id="make">
-     </div>
-     <br>
+   <div>
+     <label>Browser Select</label>
+         <select id="make" name="make" class="browser-default">
+          <option value="2" disabled selected>Make</option>
+               <%@selectable.each do |make| %>     
+           <option value="<%=make.make%><%if make.make%>"> <%=make.make%></option>
+           <%end%>
+            <%end%>
+          </select>
+        </div>
+      <br>
         <div>
-          <label for="model">Model:</label>
+          <label for="model"> Model: </label>
           <input type="text" name="model" id="model">
         </div>    
      <br>
@@ -84,24 +90,34 @@
                 <label for="last_name">city</label>
             </div>
         </div>
-             <div class="row">
-             <div class="input-field col s6">
-                <input  id="state" type="text" class="validate" name="state">
-                <label for="first_name">state:</label>
-             </div>
-                <div class="input-field col s6">
-                 <input id="country" type="text" class="validate" name="country">
-                 <label for="last_name">country:</label>
-               </div>
-               </div>
-             <input class="right" type="submit" value="Submit Post">
-          </form>
-        </span>
-      </div>
-    </li>
- </ul>
+        <div>
+       <label>Browser Select</label>
+         <select id="state" name="state" class="browser-default">
+          <option value="1" disabled selected>State</option>
+               <%@selectable.each do |state| %>     
+           <option value="<%=state.states%><%if state.states%>"> <%=state.states%></option>
+           <%end%>
+            <%end%>
+           </select>
+              </div>
+            <input class="right" type="submit" value="Submit Post">
+         </form>
+       </span>
+     </div>
+   </li>
+</ul>
+ 
+         
+ 
+   
+
+     
+    
+            
+               
  
       
+               
 
   
 

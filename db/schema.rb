@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200719152311) do
+ActiveRecord::Schema.define(version: 20200721112519) do
 
   create_table "car_posts", force: :cascade do |t|
     t.string   "make"
@@ -41,6 +41,15 @@ ActiveRecord::Schema.define(version: 20200719152311) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "selectables", force: :cascade do |t|
+    t.string   "states"
+    t.string   "model"
+    t.string   "make"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+
   create_table "users", force: :cascade do |t|
     t.string   "firstname"
     t.string   "lastname"
@@ -52,3 +61,4 @@ ActiveRecord::Schema.define(version: 20200719152311) do
   end
 
 end
+

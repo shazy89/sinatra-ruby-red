@@ -47,6 +47,12 @@ helpers do
   def house_posts
     CreateHousepost.all
   end
+
+  def slectables
+    @selectable = Selectable.all
+  end
+
+
  end
 end     
   

@@ -1,6 +1,6 @@
 class CarPost < ActiveRecord::Base
     belongs_to :user
-    validates :make, presence: true
-    validates :model, presence: true
-    validates :price, presence: true
-end
+    validates :make, :model, :price,   presence: true
+end    
+    
+

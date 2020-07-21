@@ -15,7 +15,8 @@ class PostsController < ApplicationController
       get '/user/create' do
           current_user
           @post = CarPost.new
-          if current_user
+          slectables
+          if current_user 
             erb :'user/postoptions'
           else 
          redirect '/'
@@ -27,7 +28,8 @@ class PostsController < ApplicationController
           if @newpost.save
             redirect '/userpage'
           else 
-            redirect '/user/create'
+           flash.now[:error] = @newpost.errors.full_messages
+            erb :userpage
           end     
       end 
   
