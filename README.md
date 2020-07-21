@@ -2,7 +2,7 @@
 Sinatra Ruby Red
 
 
-Through the Ruby Red  website, both companies and  customers have the opportunity to buy,
+Through the Ruby Red  app, both companies and  customers have the opportunity to buy,
 sell and exchange items and services on a scope they have never experienced before. 
 The objective of Ruby Red is to continuously enhance the user experience of online advertisement.
 
